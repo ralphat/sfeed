@@ -1,0 +1,119 @@
+members database which displays the info of members
+-- phpMyAdmin SQL Dump
+-- version 4.0.10deb1
+-- http://www.phpmyadmin.net
+-- 
+-- Host: localhost
+-- Generation Time: Sep 07, 2014 at 08:57 PM
+-- Server version: 5.5.38-0ubuntu0.14.04.1
+-- PHP Version: 5.5.9-1ubuntu4.3
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+-- 
+-- Database: `SportfeedsNITT`
+-- 
+-- --------------------------------------------------------
+-- 
+-- Table structure for table `member`
+-- 
+CREATE TABLE IF NOT EXISTS `member` (
+`Id` int(11) NOT NULL,
+`id_member1` int(11) NOT NULL AUTO_INCREMENT,
+`membername` varchar(125) DEFAULT NULL,
+`age` int(11) DEFAULT NULL,
+`rollno` int(50) DEFAULT NULL,
+`dept` varchar(125) DEFAULT NULL,
+`pos` varchar(125) DEFAULT NULL,
+PRIMARY KEY (`Id`),
+UNIQUE KEY `id_member1` (`id_member1`),
+UNIQUE KEY `rollno` (`rollno`),
+KEY `Id` (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+-- 
+-- Dumping data for table `member`
+-- 
+INSERT INTO `member` (`Id`, `id_member1`, `membername`, `age`, `rollno`, `dept`, `pos`) VALUES
+(1, 1, 'abha', 19, 106113019, 'cse', 'basketballer'),
+(2, 2, 'bhavya', 18, 106113098, 'cse', 'player');
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+------------------------------------------------------------------------------------------------------------------------------
+messages database displays the content of blog
+-- phpMyAdmin SQL Dump
+-- version 4.0.10deb1
+-- http://www.phpmyadmin.net
+-- 
+-- Host: localhost
+-- Generation Time: Sep 07, 2014 at 08:56 PM
+-- Server version: 5.5.38-0ubuntu0.14.04.1
+-- PHP Version: 5.5.9-1ubuntu4.3
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+-- 
+-- Database: `SportfeedsNITT`
+-- 
+-- --------------------------------------------------------
+-- 
+-- Table structure for table `messages`
+-- 
+CREATE TABLE IF NOT EXISTS `messages` (
+`Id` int(11) NOT NULL AUTO_INCREMENT,
+`message` varchar(300) NOT NULL,
+PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+-- 
+-- Dumping data for table `messages`
+-- 
+INSERT INTO `messages` (`Id`, `message`) VALUES
+(7, '<p>good to<span style="color:#FFFF00;"><em> speak to u today</em></span> <br></p>'),
+(8, 'good morning'),
+(10, '<p>As summer came to an end, all of the flowers in the garden wanted to know which flower was the best:</p><p>The pink roses said, "We are the best because we were the first flowers to bloom in the spring."</p><p>The white daisies said, "Oh no, we are the best because we have pretty flowers all summ');
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-----------------------------------------------------------------------------------------------------------------
+teams database admin login access key and id
+-- phpMyAdmin SQL Dump
+-- version 4.0.10deb1
+-- http://www.phpmyadmin.net
+-- 
+-- Host: localhost
+-- Generation Time: Sep 07, 2014 at 08:56 PM
+-- Server version: 5.5.38-0ubuntu0.14.04.1
+-- PHP Version: 5.5.9-1ubuntu4.3
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+-- 
+-- Database: `SportfeedsNITT`
+-- 
+-- --------------------------------------------------------
+-- 
+-- Table structure for table `Teams`
+-- 
+CREATE TABLE IF NOT EXISTS `Teams` (
+`Id` int(11) NOT NULL AUTO_INCREMENT,
+`Team` varchar(30) NOT NULL,
+`AccessKey` varchar(20) NOT NULL,
+PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+-- 
+-- Dumping data for table `Teams`
+-- 
+INSERT INTO `Teams` (`Id`, `Team`, `AccessKey`) VALUES
+(1, 'Cricket Team', '1234cric');
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
